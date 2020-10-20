@@ -1,0 +1,17 @@
+-
+        name: Creating the users
+        hosts: node2
+        tasks:
+                -
+                        name: Creating the users
+                        user:
+                                name: '{{ item.username }}'
+                                uid: '{{ item.uid }}'
+                        loop:
+                                - username: pl
+                                  uid: 1312
+                                - username: ok
+                                  uid: 1313
+                                - username: ij
+                                  uid: 1314
+
